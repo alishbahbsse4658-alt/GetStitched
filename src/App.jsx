@@ -19,7 +19,7 @@ function App() {
     <Router>
        <ScrollToTop />
       <div className="app-container">
-        <Navbar />
+        <NavBar />
         
         {/* 👇 UPDATED: Removed inline styles. CSS handles the height now. */}
         <main> 
