@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.jpeg'; 
 
-const Navbar = () => {
+const NavBar = () => {
   return (
     <nav>
       {/* 👇 UPDATED LOGO SECTION */}
@@ -51,4 +51,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
