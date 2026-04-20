@@ -1,0 +1,16 @@
+:root {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* New Warm Off-White Background */
+    background-color: #F5F5F0;
+    color: #2E2E2E;
+}

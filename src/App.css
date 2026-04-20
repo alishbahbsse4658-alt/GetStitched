@@ -1,0 +1,315 @@
+/* src/App.css */
+
+
+/* 1. IMPORT FONTS (Serif for headings, Sans for text) */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+/* 2. COLOR VARIABLES (The New Theme) */
+
+:root {
+    /* Primary: Royal Blue (as seen in icons/buttons) */
+    --primary: #4A90E2;
+    /* Secondary: Dark Navy (for Footer/Strong text) */
+    --secondary: #1E293B;
+    /* Backgrounds */
+    --bg-body: #FFFFFF;
+    /* Pure White */
+    --bg-light: #F8F9FA;
+    /* Very Light Grey for cards */
+    --bg-dark: #111827;
+    /* Deep Black/Blue for Footer */
+    /* Text */
+    --text-heading: #111827;
+    /* Almost Black */
+    --text-body: #4B5563;
+    /* Muted Grey */
+    --white: #FFFFFF;
+    /* Borders & Shadows */
+    --border-light: #E5E7EB;
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+
+/* 3. GLOBAL RESETS */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-body);
+    font-family: 'Inter', sans-serif;
+    /* Clean body text */
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Headings use the Elegant Serif Font */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-heading);
+    margin-bottom: 0.5em;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main>div {
+    width: 100%;
+    flex: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease;
+}
+
+
+/* 4. COMPONENT STYLES */
+
+
+/* --- Navbar --- */
+
+nav {
+    background-color: var(--white);
+    padding: 15px 50px;
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links a {
+    color: var(--text-heading) !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-left: 35px;
+    letter-spacing: 0.5px;
+}
+
+.nav-links a:hover {
+    color: var(--primary) !important;
+    /* Blue Hover */
+}
+
+
+/* --- Cards --- */
+
+.card {
+    background: var(--bg-light);
+    /* Off-white card */
+    padding: 30px;
+    border-radius: 8px;
+    /* Slightly sharper corners */
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary);
+    /* Blue border on hover */
+    background: var(--white);
+}
+
+
+/* --- Buttons --- */
+
+
+/* Primary Action (Blue) */
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 14px 30px;
+    border: none;
+    border-radius: 4px;
+    /* Minimal radius */
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #357ABD;
+    /* Darker Blue */
+    transform: translateY(-1px);
+}
+
+
+/* Accent Button (Used for 'Register') - White with Blue Text */
+
+.btn-accent {
+    background-color: var(--white);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 14px 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-accent:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+
+/* --- Inputs --- */
+
+.form-control {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    background: var(--white);
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    /* Blue Glow */
+}
+
+
+/* --- Footer (Dark Mode) --- */
+
+.footer-container {
+    background-color: var(--bg-dark);
+    /* Deep Dark Background */
+    color: #9CA3AF;
+    /* Light Grey Text */
+    padding-top: 80px;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #374151;
+    /* Subtle divider */
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-logo {
+    color: var(--white);
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.footer-heading {
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+}
+
+.footer-links a {
+    display: block;
+    margin-bottom: 12px;
+    color: #D1D5DB;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+    /* Blue on hover */
+    padding-left: 5px;
+}
+
+.footer-contact-link {
+    color: var(--white);
+    border-bottom: 1px dotted #666;
+}
+
+.footer-contact-link:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #374151;
+    /* Dark Grey Circle */
+    transition: background 0.3s;
+}
+
+.icon-link:hover .icon-circle {
+    background: var(--primary);
+    /* Blue on hover */
+}
+
+.footer-bottom {
+    background-color: #0B0F19;
+    /* Almost Black */
+    text-align: center;
+    padding: 25px;
+    font-size: 0.85rem;
+    color: #6B7280;
+}
