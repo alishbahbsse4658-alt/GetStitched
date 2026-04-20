@@ -44,7 +44,7 @@ const Booking = () => {
         ...formData
       };
 
-      await axios.post('http://localhost:5000/api/bookings', bookingData);
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/bookings`, bookingData);
       alert("Request Sent Successfully!");
       navigate('/tailors');
     } catch (error) {

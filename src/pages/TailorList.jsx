@@ -12,7 +12,7 @@ const TailorList = () => {
   useEffect(() => {
     const fetchTailors = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/tailors');
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/tailors`);
         setTailors(res.data);
         setLoading(false);
       } catch (err) {

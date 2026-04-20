@@ -16,7 +16,7 @@ const RegisterCustomer = () => {
     setIsError(false);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/users', formData);
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/users`, formData);
       localStorage.setItem('userId', res.data._id);
       localStorage.setItem('userName', res.data.name);
       

@@ -7,7 +7,7 @@ const TailorsPage = () => {
   const [tailors, setTailors] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/tailors")
+    fetch(`${import.meta.env.VITE_API_URL}/api/tailors`)
       .then(res => res.json())
       .then(data => setTailors(data))
       .catch(err => console.log(err));

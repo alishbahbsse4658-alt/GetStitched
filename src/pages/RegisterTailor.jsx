@@ -63,7 +63,7 @@ const RegisterTailor = () => {
       };
       // 👆 END OF FIX
 
-      await axios.post('http://localhost:5000/api/tailors', payload);
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/tailors`, payload);
       
       alert('Registration Successful! You are now listed.');
       navigate('/tailors');
