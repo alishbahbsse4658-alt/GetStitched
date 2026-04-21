@@ -18,7 +18,8 @@ const Home = () => {
       justifyContent: 'center',
       position: 'relative',
       margin: 0,
-      padding: 0
+      padding: 0,
+      overflowX: 'hidden'
     }}>
       
       {/* 👇 FIX 2: Removed Dark Overlay so the image is "Clear" */}
@@ -44,7 +45,7 @@ const Home = () => {
          <h1 style={{ 
           color: '#4A90E2', /* Royal Blue */
           fontFamily: "'Playfair Display', serif",
-          fontSize: '4.5rem', 
+          fontSize: 'clamp(2rem, 8vw, 4.5rem)', 
           marginBottom: '20px', 
           fontWeight: '700',
           letterSpacing: '-1px',
