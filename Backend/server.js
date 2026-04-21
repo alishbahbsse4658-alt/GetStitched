@@ -8,7 +8,10 @@ dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: ['https://get-stitched-one.vercel.app', 'http://localhost:5173'],
+    credentials: true
+}));
 app.use(express.json());
 
 // 👇 DEBUGGING LOGS (Check your terminal for these!)
