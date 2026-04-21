@@ -13,7 +13,7 @@ const TailorList = () => {
     const fetchTailors = async () => {
       try {
         const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/tailors`);
-        setTailors(res.data);
+        setTailors(Array.isArray(res.data) ? res.data : []);
         setLoading(false);
       } catch (err) {
         setError('Failed to load tailors. Make sure backend is running.');
