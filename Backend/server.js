@@ -10,6 +10,7 @@ connectDB();
 const app = express();
 app.use(cors({
     origin: ['https://get-stitched-one.vercel.app', 'http://localhost:5173'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     credentials: true
 }));
 app.use(express.json());
