@@ -9,7 +9,11 @@ connectDB();
 
 const app = express();
 app.use(cors({
-    origin: ['https://get-stitched-one.vercel.app', 'http://localhost:5173'],
+    origin: [
+        'https://get-stitched-one.vercel.app',
+        'https://get-stitched-gee9f0m9r-alishbahbsse4658-alts-projects.vercel.app',
+        'http://localhost:5173'
+    ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     credentials: true
 }));
