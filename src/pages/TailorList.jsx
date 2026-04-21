@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import TailorCard from '../components/TailorCard';
+import TailorCard from '../Components/TailorCard';
 
 const TailorList = () => {
   const [tailors, setTailors] = useState([]);
