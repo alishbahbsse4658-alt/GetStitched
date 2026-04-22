@@ -72,30 +72,35 @@ GetStitched/
 │   ├── config/
 │   │   └── db.js
 │   ├── controllers/
+│   │   ├── bookingController.js
 │   │   ├── tailorController.js
-│   │   ├── userController.js
-│   │   └── bookingController.js
+│   │   └── userController.js
 │   ├── models/
+│   │   ├── Booking.js
 │   │   ├── Tailor.js
-│   │   ├── User.js
-│   │   └── Booking.js
+│   │   └── User.js
 │   ├── routes/
+│   │   ├── bookingRoutes.js
 │   │   ├── tailorRoutes.js
-│   │   ├── userRoutes.js
-│   │   └── bookingRoutes.js
+│   │   └── userRoutes.js
 │   └── server.js
 ├── src/
 │   ├── Components/
+│   │   ├── Footer.jsx
 │   │   ├── NavBar.jsx
-│   │   ├── Hero.jsx
-│   │   ├── TailorCard.jsx
-│   │   └── Footer.jsx
+│   │   ├── ScrollToTop.jsx
+│   │   └── TailorCard.jsx
 │   ├── pages/
+│   │   ├── About.jsx
+│   │   ├── Booking.jsx
+│   │   ├── ComingSoon.jsx
 │   │   ├── Home.jsx
-│   │   ├── TailorList.jsx
+│   │   ├── RegisterCustomer.jsx
 │   │   ├── RegisterTailor.jsx
-│   │   └── RegisterCustomer.jsx
+│   │   ├── TailorDetails.jsx
+│   │   └── TailorList.jsx
 │   └── App.jsx
+├── screenshots/
 ├── vercel.json
 └── README.md
 ```
