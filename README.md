@@ -60,7 +60,7 @@ In Pakistan, finding a reliable local tailor is a major challenge — especially
 | Backend | Node.js, Express.js |
 | Database | MongoDB Atlas (Mongoose) |
 | Deployment | Vercel (Frontend), Railway (Backend) |
-| Styling | CSS3, Lucide React Icons |
+| Styling | CSS3 |
 
 ---
 

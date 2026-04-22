@@ -191,7 +191,7 @@ const About = () => {
           {/* Step 3 */}
           <div className="card" style={{ padding: '30px 20px' }}>
             <div style={styles.stepCircle}>3</div>
-            <h3 style={styles.cardHeading}>Book</h3>
+            <h3 style={styles.cardHeading}>RequestService</h3>
             <p style={{ fontSize: '0.9rem', color: '#666' }}>
               Schedule your tailoring service and get your garments professionally handled.
             </p>
